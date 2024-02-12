@@ -1,25 +1,54 @@
-//Arrays
+ï»¿//Arrays
 #include<iostream>
 using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 void main()
 {
-	setlocale(LC_ALL, "");
-	cout << "Hello Arrays" << endl;
-	const int SIZE = 5;
-	int arr[SIZE];
-
-	cout << "Ââåäèòå " << SIZE << " öåëûå ÷èñëà: " << endl;
-	//arr[2] = 2048; // îáðàùåíèå ê ýëåìåíòó ìàññèâà íà çàïèñü
-	//cout << arr[2] << endl; // îáðàùåíèå ê ýëåìåíòó ìàññèâà íà ÷òåíèå
-	for (int i = 0; i < SIZE; i++)
-	{
-		cout << " Ýëåìåíò íîìåð " << i << " : ";
-		cin >> arr[i];
-	}
-	cout << " Âûâîä ýëåìåíòîâ ìàññèâà: " << endl;
-	for (int i = 0; i < SIZE; i++)
-	{
-		cout << arr[i] << " ";
-	}
+    setlocale(LC_ALL, "");
+    cout << "Hello Arrays" << endl;
+    int SIZE;
+    int sum = 0;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
+    cin >> SIZE;
+    int arr[] = { 1, 2, 3 };
+    int MIN = arr[0];
+    int MAX = arr[0];
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    for (int i = 0; i < SIZE; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << arr[i] << "\t";
+    }
+    cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¾Ð±Ñ€.Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    for (int i = SIZE - 1; i >= 0; --i)
+    {
+        cout << arr[i] << "\t";
+    }
+    cout << "\n Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    for (int i = 0; i < SIZE; i++)
+    {
+        sum += arr[i];
+    }
+    cout << sum << "\t";
+    cout << "\n Ð¡Ñ€ÐµÐ´Ð½Ðµ-Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    cout << double(sum) / SIZE << "\t";
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (arr[i] < MIN)
+            MIN = arr[i];
+        if (arr[i] > MAX)
+            MAX = arr[i];
+    }
+    cout << "\n Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    cout << MIN << "\t";
+    cout << "\n Ð¼Ð°ÐºÑÐ¸Ð¼ÑƒÐ¼ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
+    cout << MAX << "\t";
+    cout << endl;
 }
