@@ -1,21 +1,33 @@
 ﻿//Shift
+#include <Windows.h>
 #include <iostream>
 using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int SIZE = 10;
-	int arr[SIZE] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
-	int c = arr[0];
-	for (int i = 0; i < 5; i++)
+	const int n = 10;
+	int arr[n] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
+	for (int i = 0; i < n; i++)
 	{
-		for (int i = 0; i < SIZE; i++)
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+	int number_of_shifts;
+	cout << "На сколько элементов сдвинуть массив:"; cin >> number_of_shifts;
+	for (int i = 0; i < number_of_shifts; i++)
+	{
+	    int buffer = arr[0];
+		for (int i = 0; i < n - 1; i++)
+		{ 
+			arr[i] = arr[i + 1];
+		}
+	    arr[n - 1] = buffer;
+		system("CLS");
+		for (int i = 0; i < n; i++)
 		{
 			cout << arr[i] << "\t";
-			arr[i] = arr[i + 1]; // выполняем сдвиг влево
 		}
-		arr[SIZE - 1] = c; // возвращаем последнему элементу значение первого элемента
-		c = arr[0]; // присваиваем переменной с новое значение первого элемента
 		cout << endl;
+		Sleep(1000);
 	}
 }
