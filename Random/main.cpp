@@ -17,12 +17,14 @@ void main()
     int size;
     cout << "¬ведите размер сучайного массива : ";
     cin >> size;
-    int range;
-    cout << "¬ведите диапазон чисел от 0 до: ";
-    cin >> range;
+    int range_1, range_2;
+    cout << "¬ведите диапазон чисел от : ";
+    cin >> range_1;
+    cout << "до : ";
+    cin >> range_2;
     for (int i = 0; i < size; i++)
     {
-        num = rand() % range;
+        num = rand() % (range_2-range_1) + range_1;
         Arr[i] = num;
     }
     cout << "\nЁлементы данного массива:\n";
