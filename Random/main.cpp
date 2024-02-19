@@ -9,37 +9,33 @@ using std::endl;
 void main()
 {
     setlocale(LC_ALL, "");
-    int Arr[20];
-    srand(time(NULL));
-    int num;
-    int min = 0;
-    int max = 0;
+    const int n = 5;
+    int Arr[n];
     int size;
-    cout << "¬ведите размер сучайного массива : ";
-    cin >> size;
     int range_1, range_2;
     cout << "¬ведите диапазон чисел от : ";
     cin >> range_1;
     cout << "до : ";
     cin >> range_2;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
-        num = rand() % (range_2-range_1) + range_1;
-        Arr[i] = num;
+        Arr[i] = rand() % (range_2-range_1) + range_1;
     }
     cout << "\nЁлементы данного массива:\n";
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
         cout << Arr[i] << " "; 
     }
     cout << endl;
     cout << "\nЁлементы обр.массива:\n";
-    for (int i = size - 1; i >= 0; --i)
+    for (int i = n - 1; i >= 0; --i)
     {
         cout << Arr[i] << " ";
     }
     cout << endl;
-    for (int i = 0; i < size; i++)
+    int min = Arr[0];
+    int max = Arr[0];
+    for (int i = 0; i < n; i++)
     {
         if (Arr[i] < min)min = Arr[i];
         if (Arr[i] > max)max = Arr[i];
