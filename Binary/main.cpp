@@ -11,7 +11,7 @@ void main()
     int celoe;
     cout << "¬ведите целое число: ";
     cin >> celoe;
-    int binary[99];
+    int binary[10];
     int ind = 0;
 
     if (celoe == 0) 

@@ -14,8 +14,8 @@ void main()
     cout << "Введите размер массива: ";
     cin >> SIZE;
     int arr[] = { 1, 2, 3 };
-    int MIN = arr[0];
-    int MAX = arr[0];
+    int min = arr[0];
+    int max = arr[0];
     cout << "Введите элементы массива:\n";
     for (int i = 0; i < SIZE; i++)
     {
@@ -31,24 +31,22 @@ void main()
     {
         cout << arr[i] << "\t";
     }
-    cout << "\n Сумма элементов массива:\n";
+    cout << endl;
     for (int i = 0; i < SIZE; i++)
     {
         sum += arr[i];
     }
-    cout << sum << "\t";
-    cout << "\n Средне-арифметическое элементов массива:\n";
-    cout << double(sum) / SIZE << "\t";
+    cout << "\n Сумма элементов массива:\n" << sum << endl;
+    cout << "\n Среднее-арифметическое элементов массива:\n";
+    cout << (double)sum / SIZE << "\t";
     for (int i = 0; i < SIZE; i++)
     {
-        if (arr[i] < MIN)
-            MIN = arr[i];
-        if (arr[i] > MAX)
-            MAX = arr[i];
+        if (arr[i] < min)min = arr[i];
+        if (arr[i] > max)max = arr[i];
     }
     cout << "\n минимум массива:\n";
-    cout << MIN << "\t";
+    cout << min << "\t";
     cout << "\n максимум массива:\n";
-    cout << MAX << "\t";
+    cout << max << "\t";
     cout << endl;
 }
