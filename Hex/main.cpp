@@ -1,4 +1,4 @@
-//Hex
+ï»¿//Hex
 #include<iostream>
 using namespace std;
 using std::cout;
@@ -9,14 +9,14 @@ void main()
 {
     setlocale(LC_ALL, "");
     int celoe;
-    cout << "Ââåäèòå öåëîå ÷èñëî: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
     cin >> celoe;
     int binary[10];
     int ind = 0;
 
     if (celoe == 0)
     {
-        cout << "×èñëî " << celoe << " â øåñòíàäöàòèðè÷íîé ñèñòåìå: " << endl;
+        cout << "Ð§Ð¸ÑÐ»Ð¾ " << celoe << " Ð² ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚Ð¸Ñ€Ð¸Ñ‡Ð½Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ðµ: " << endl;
     }
     else {
         while (celoe > 0)
@@ -25,7 +25,7 @@ void main()
             celoe = celoe / 16;
             ind++;
         }
-        cout << "×èñëî â øåñòíàäöàòèðè÷íîé ñèñòåìå: ";
+        cout << "Ð§Ð¸ÑÐ»Ð¾ Ð² ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚Ð¸Ñ€Ð¸Ñ‡Ð½Ð¾Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ðµ: ";
         for (int i = ind - 1; i >= 0; i--)
         {
             cout << binary[i] << " ";
