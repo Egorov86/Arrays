@@ -1,4 +1,4 @@
-//Random
+ï»¿//Random
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
@@ -13,21 +13,21 @@ void main()
     int Arr[n];
     int size;
     int range_1, range_2;
-    cout << "Ââåäèòå äèàïàçîí ÷èñåë îò : ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½ Ñ‡Ð¸ÑÐµÐ» Ð¾Ñ‚ : ";
     cin >> range_1;
-    cout << "äî : ";
+    cout << "Ð´Ð¾ : ";
     cin >> range_2;
     for (int i = 0; i < n; i++)
     {
         Arr[i] = rand() % (range_2-range_1) + range_1;
     }
-    cout << "\nÝëåìåíòû äàííîãî ìàññèâà:\n";
+    cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
     for (int i = 0; i < n; i++)
     {
         cout << Arr[i] << " "; 
     }
     cout << endl;
-    cout << "\nÝëåìåíòû îáð.ìàññèâà:\n";
+    cout << "\nÐ­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¾Ð±Ñ€.Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
     for (int i = n - 1; i >= 0; --i)
     {
         cout << Arr[i] << " ";
@@ -40,9 +40,9 @@ void main()
         if (Arr[i] < min)min = Arr[i];
         if (Arr[i] > max)max = Arr[i];
     }
-    cout << "\n ìèíèìóì ìàññèâà:\n";
+    cout << "\n Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
     cout << min << "\t";
-    cout << "\n ìàêñèìóì ìàññèâà:\n";
+    cout << "\n Ð¼Ð°ÐºÑÐ¸Ð¼ÑƒÐ¼ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
     cout << max << "\t";
     cout << endl;
 }
