@@ -24,6 +24,7 @@
     <ProjectGuid>{d94b8542-47cc-4d10-8258-623bdc4dcd2c}</ProjectGuid>
     <RootNamespace>Hex</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Hexadecimal</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
