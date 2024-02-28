@@ -10,7 +10,7 @@ void main()
     for (int i = 0; i < 256; i++) cout << i << "\t" << char(i) << endl;
     setlocale(LC_ALL, "");
     int decimal;
-    cout << "Введите десятичное число: "; cin >> decimal;
+    cout << "Введите десятичное число : "; cin >> decimal;
     const int n = 8;
     char hex[n] = {};
     int i = 0;
