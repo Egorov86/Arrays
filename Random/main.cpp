@@ -15,7 +15,7 @@ void main()
     int range_1, range_2;
     cout << "Введите диапазон чисел от : ";
     cin >> range_1;
-    cout << "до : ";
+    cout << "до числа : ";
     cin >> range_2;
     for (int i = 0; i < n; i++)
     {
